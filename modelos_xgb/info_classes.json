@@ -1,0 +1,11 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "class_names": [
+    "Alerta",
+    "Sonolento"
+  ],
+  "accuracy": 0.8709325860189943
+}
