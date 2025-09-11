@@ -1,0 +1,45 @@
+{
+  "dataset": "UTA-RLDD-CORRECTED",
+  "version": "2.0",
+  "features": [
+    "PERCLOS",
+    "MAR",
+    "BLINK_RATE",
+    "HEAD_STABILITY"
+  ],
+  "sequence_length": 90,
+  "overlap_ratio": 0.67,
+  "target_fps": 30,
+  "n_samples": 32111,
+  "n_features": 4,
+  "n_subjects": 48,
+  "n_folds": 5,
+  "class_mapping": {
+    "0": "Alert",
+    "5": "Low_Vigilant",
+    "10": "Drowsy"
+  },
+  "processed_videos": 145,
+  "failed_videos": 0,
+  "optimization_settings": {
+    "fast_mode": false,
+    "max_videos_processed": 145,
+    "max_duration_sec": 240,
+    "frame_skip": 1,
+    "quality_threshold": 0.7,
+    "multiprocessing_cores": 4
+  },
+  "improvements": {
+    "proper_temporal_dynamics": true,
+    "discriminative_features": true,
+    "realistic_labeling": true,
+    "quality_control": true,
+    "parallel_processing": true,
+    "frame_skipping": true
+  },
+  "feature_thresholds": {
+    "EAR_CLOSED": 0.22,
+    "EAR_BLINK": 0.25,
+    "MAR_YAWN": 0.6
+  }
+}
