@@ -1,0 +1,23 @@
+{
+  "classes": [
+    0,
+    1
+  ],
+  "class_names": [
+    "Alerta",
+    "Sonolento"
+  ],
+  "accuracy": 0.9391250194613109,
+  "auc": 0.983476804733471,
+  "best_params": {
+    "n_estimators": 490,
+    "max_depth": 10,
+    "learning_rate": 0.05469030015305462,
+    "subsample": 0.9762684373431535,
+    "colsample_bytree": 0.6312657427751117,
+    "reg_alpha": 0.9686376502670134,
+    "reg_lambda": 0.0002969207856315659
+  },
+  "best_auc_validation": 0.9758902887459633,
+  "n_trials": 100
+}
