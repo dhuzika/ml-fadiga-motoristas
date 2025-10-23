@@ -1,0 +1,27 @@
+{
+  "nome": "Usuario_Padrao",
+  "criado_em": "2025-10-21T17:56:06.485449",
+  "calibracao": {
+    "ear_medio": 0.2792477160745534,
+    "ear_threshold": 0.21478037349475393,
+    "mar_medio": 0.08004776761362016,
+    "mar_threshold": 0.08668685187490792,
+    "blink_rate_medio": 25.479894428865713,
+    "head_stability_medio": 0.10132465006417792,
+    "calibrado": true,
+    "data_calibracao": "2025-10-21T17:58:07.101735"
+  },
+  "configuracoes": {
+    "sensibilidade": 0.9999999999999983,
+    "tempo_alerta": 3.0,
+    "alertas_sonoros": true,
+    "alertas_visuais": true,
+    "smoothing_window": 5
+  },
+  "estatisticas": {
+    "sessoes_total": 0,
+    "tempo_total": 0.0,
+    "alertas_total": 91,
+    "ultima_sessao": null
+  }
+}

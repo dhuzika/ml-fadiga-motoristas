@@ -1,0 +1,51 @@
+{
+  "nome": "teste00",
+  "criado_em": "2025-10-22T09:34:43.205495",
+  "sessoes": [
+    {
+      "duracao": 13.594184637069702,
+      "timestamp": "2025-10-22T09:34:57.281337",
+      "total_alertas": 0,
+      "alertas_por_nivel": {}
+    },
+    {
+      "duracao": 15.60080862045288,
+      "timestamp": "2025-10-22T09:35:26.098203",
+      "total_alertas": 0,
+      "alertas_por_nivel": {}
+    },
+    {
+      "duracao": 6.446781396865845,
+      "timestamp": "2025-10-22T09:46:36.015602",
+      "total_alertas": 0,
+      "alertas_por_nivel": {}
+    }
+  ],
+  "calibracao": {
+    "ear_baseline": null,
+    "ear_std": null,
+    "mar_baseline": null,
+    "mar_std": null,
+    "blink_rate_baseline": null,
+    "perclos_alerta_max": 20.0,
+    "perclos_sonolento_min": 60.0,
+    "calibrado": false
+  },
+  "thresholds_personalizados": {
+    "ear_sonolento": 0.25,
+    "ear_critico": 0.2,
+    "perclos_aviso": 30.0,
+    "perclos_atencao": 45.0,
+    "perclos_alerta": 60.0,
+    "perclos_critico": 80.0,
+    "tempo_olhos_fechados_aviso": 1.5,
+    "tempo_olhos_fechados_critico": 3.0
+  },
+  "estatisticas": {
+    "total_sessoes": 3,
+    "tempo_total_uso": 35.64177465438843,
+    "alertas_gerados": 0,
+    "ear_medio_historico": [],
+    "perclos_medio_historico": []
+  }
+}

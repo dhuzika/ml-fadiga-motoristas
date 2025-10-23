@@ -1,0 +1,32 @@
+{
+  "nome": "edu",
+  "criado_em": "2025-10-22T11:57:02.016120",
+  "sessoes": [
+    {
+      "duracao": 108.66392469406128,
+      "timestamp": "2025-10-22T11:58:53.584446",
+      "total_alertas": 782,
+      "alertas_por_nivel": {
+        "atencao": 204,
+        "aviso": 35,
+        "alerta": 140,
+        "critico": 403
+      },
+      "EAR_medio": 0.18705946467518023,
+      "EAR_min": 0.056068938378834574,
+      "EAR_max": 0.30647896043407796,
+      "EAR_std": 0.06843337463741801,
+      "PERCLOS_medio": 56.459163855667995,
+      "PERCLOS_min": 1.1111111111111112,
+      "PERCLOS_max": 100.0,
+      "PERCLOS_std": 35.94806426502308,
+      "MAR_medio": 0.07876025540131293,
+      "MAR_min": 0.053171487653307016,
+      "MAR_max": 0.09644639390452911,
+      "MAR_std": 0.008283113716701805,
+      "tempo_olhos_fechados_medio": 1.6634146831621242,
+      "tempo_olhos_fechados_min": 0.0,
+      "tempo_olhos_fechados_max": 8.73235559463501,
+      "tempo_olhos_fechados_std": 2.2221967564894958,
+      "frames_processados_medio": 996.0,
+      "frames_processados_min": 

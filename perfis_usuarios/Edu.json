@@ -1,0 +1,23 @@
+{
+  "nome": "Edu",
+  "criado_em": "2025-10-22T11:59:33.012954",
+  "sessoes": [
+    {
+      "duracao": 36.39507746696472,
+      "timestamp": "2025-10-22T12:00:12.318612",
+      "total_alertas": 0,
+      "alertas_por_nivel": {},
+      "EAR_medio": 0.27845168502803475,
+      "EAR_min": 0.2582249612788541,
+      "EAR_max": 0.3006178864064981,
+      "EAR_std": 0.010868703113749836,
+      "PERCLOS_medio": 0.3350970017636684,
+      "PERCLOS_min": 0.0,
+      "PERCLOS_max": 1.1111111111111112,
+      "PERCLOS_std": 0.5099411744197869,
+      "MAR_medio": 0.08395109476856179,
+      "MAR_min": 0.0763104032907271,
+      "MAR_max": 0.09336904407725345,
+      "MAR_std": 0.003353831194456149,
+      "tempo_olhos_fechados_medio": 0.0,
+      "tempo_olhos_fechados_min": 
