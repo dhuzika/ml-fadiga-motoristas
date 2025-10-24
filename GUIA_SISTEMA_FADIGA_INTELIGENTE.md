@@ -389,3 +389,113 @@ O **Sistema Inteligente de Detecção de Fadiga** é uma aplicação avançada q
 - Controles interativos durante execução
 
 Este sistema representa um avanço significativo na detecção de fadiga, combinando precisão técnica com facilidade de uso, oferecendo uma ferramenta poderosa para prevenir acidentes relacionados à sonolência ao volante.
+
+## ❓ Perguntas e Respostas Frequentes
+
+### 🚗 Perguntas Gerais sobre Funcionamento
+
+**P: Como o sistema detecta se estou com sono?**
+R: O sistema analisa continuamente seus olhos, boca e movimentos da cabeça através da câmera. Ele mede o quão abertos estão seus olhos (EAR), detecta bocejos (MAR), conta suas piscadas e monitora se sua cabeça está estável. Quando esses padrões indicam sonolência, o sistema emite alertas progressivos.
+
+**P: Preciso de algum equipamento especial?**
+R: Não! Funciona com qualquer webcam comum e um computador. O sistema usa apenas a câmera para ver seu rosto - não precisa de sensores, fones de ouvido especiais ou outros dispositivos.
+
+**P: O sistema funciona no escuro ou com pouca luz?**
+R: O sistema precisa de iluminação adequada para ver seu rosto claramente. Funciona bem com luz natural, luz artificial ou até a luz do próprio monitor, mas não funciona no escuro completo.
+
+**P: Quanto tempo demora para o sistema me "conhecer"?**
+R: Apenas 30 segundos! Durante a calibração inicial, o sistema aprende seus padrões únicos de piscadas, abertura dos olhos e movimentos naturais. Cada pessoa é diferente, por isso a personalização é essencial.
+
+### 🎯 Perguntas sobre Precisão e Confiabilidade
+
+**P: O sistema pode dar "falsos alarmes"?**
+R: O sistema foi projetado para minimizar falsos positivos. Ele usa um "sistema de consenso temporal" que confirma sinais de sonolência por vários frames consecutivos antes de alertar. Piscadas normais, movimentos rápidos da cabeça ou mudanças temporárias de posição geralmente não geram alertas.
+
+**P: E se eu estiver apenas pensando ou concentrado?**
+R: O sistema diferencia entre concentração normal e sonolência real. Quando você está concentrado, seus olhos permanecem abertos e alertas, mesmo que piscando menos. A sonolência tem padrões específicos: olhos que ficam fechados por mais tempo, piscadas mais lentas, e movimentos de cabeça característicos.
+
+**P: O sistema funciona se eu usar óculos?**
+R: Sim! O sistema MediaPipe consegue detectar os pontos dos olhos mesmo com óculos normais. Óculos de sol muito escuros podem dificultar a detecção, mas óculos de grau comuns não são problema.
+
+**P: Qual a precisão do sistema?**
+R: O sistema principal funciona com algoritmos adaptativos personalizados que se ajustam a cada usuário. Adicionalmente, há um modelo de backup XGBoost com 92.5% de precisão treinado em dados científicos reais de sonolência.
+
+### 🔬 Perguntas Técnicas
+
+**P: O que significam EAR, MAR e PERCLOS?**
+R:
+- **EAR (Eye Aspect Ratio)**: Mede o quão abertos estão seus olhos calculando a razão entre altura e largura dos olhos
+- **MAR (Mouth Aspect Ratio)**: Detecta bocejos medindo a abertura da boca
+- **PERCLOS**: Percentual de tempo que seus olhos ficam fechados - é uma métrica científica padrão para medir sonolência
+
+**P: Como o sistema "aprende" meus padrões?**
+R: Durante a calibração de 30 segundos, o sistema coleta dados sobre seu EAR normal, frequência de piscadas, padrões de movimento da cabeça e outros indicadores pessoais. Esses dados criam mais de 20 "thresholds" personalizados só para você.
+
+**P: Quantos pontos faciais o sistema analisa?**
+R: O MediaPipe detecta 468 pontos faciais, mas o sistema foca principalmente nos pontos específicos dos olhos e boca que são mais relevantes para detectar sonolência.
+
+**P: O sistema usa inteligência artificial?**
+R: Sim, de duas formas: primeiro, o MediaPipe (Google) usa IA para detectar pontos faciais em tempo real. Segundo, há um modelo XGBoost treinado com dados científicos que serve como backup e validação adicional dos algoritmos principais.
+
+### 💼 Perguntas sobre Aplicações Práticas
+
+**P: Este sistema poderia ser usado em carros reais?**
+R: Absolutamente! A tecnologia pode ser integrada em veículos com uma câmera apontada para o motorista. Várias montadoras já desenvolvem sistemas similares. Este é um protótipo que demonstra como a tecnologia funciona.
+
+**P: Funciona para motoristas profissionais?**
+R: Sim, é especialmente útil para caminhoneiros, motoristas de ônibus e outros profissionais que dirigem por longas horas. O sistema se adapta aos padrões únicos de cada pessoa, tornando-se mais preciso com o uso.
+
+**P: Pode ser usado para estudar ou trabalhar no computador?**
+R: Claro! Muitas pessoas usam para monitorar fadiga durante estudos prolongados, trabalho noturno ou qualquer atividade que requeira atenção sustentada.
+
+**P: O sistema poderia avisar outras pessoas se eu estiver com sono?**
+R: Tecnicamente sim - o sistema poderia ser configurado para enviar alertas para supervisores, familiares ou sistemas de emergência quando detectar sonolência crítica.
+
+### ⚠️ Perguntas sobre Limitações
+
+**P: Em que situações o sistema não funciona bem?**
+R: O sistema pode ter dificuldades com:
+- Iluminação muito fraca ou muito forte
+- Movimento excessivo da cabeça ou do corpo
+- Óculos de sol escuros
+- Cabelo cobrindo completamente os olhos
+- Posicionamento muito longe da câmera
+
+**P: O sistema pode ser "enganado" propositalmente?**
+R: Embora seja possível tentar enganar o sistema forçando os olhos abertos, isso é muito difícil de manter por longos períodos e não é prático durante atividades reais como dirigir. O sistema monitora múltiplas métricas simultaneamente.
+
+**P: E se eu tiver uma condição médica que afeta meus olhos?**
+R: Pessoas com condições específicas dos olhos devem consultar um médico antes de confiar no sistema. A calibração personalizada pode ajudar a adaptar-se a algumas condições, mas não substitui orientação médica.
+
+### 🔒 Perguntas sobre Privacidade e Segurança
+
+**P: O sistema grava ou armazena vídeos do meu rosto?**
+R: Não! O sistema processa as imagens em tempo real apenas para calcular as métricas faciais. Não grava, não armazena e não transmite vídeos. Apenas salva estatísticas numéricas (como valores de EAR) no seu perfil pessoal.
+
+**P: Meus dados ficam salvos onde?**
+R: Todos os dados ficam salvos localmente no seu computador em arquivos JSON simples. Nada é enviado para internet ou servidores externos. Você tem controle total sobre seus dados.
+
+**P: O sistema poderia ser usado para me espionar?**
+R: O sistema foi projetado especificamente para detecção de fadiga e não possui recursos de reconhecimento facial, identificação pessoal ou qualquer forma de vigilância. É uma ferramenta de segurança, não de espionagem.
+
+### 🆚 Perguntas Comparativas
+
+**P: Como este sistema se compara aos sensores de sono dos carros modernos?**
+R: Muitos carros modernos usam sensores de direção ou movimento do volante para detectar sonolência. Este sistema é mais direto - analisa você diretamente, não o comportamento do veículo. Pode detectar sonolência antes mesmo dela afetar sua direção.
+
+**P: É melhor que wearables (smartwatches, pulseiras)?**
+R: São tecnologias complementares. Wearables monitoram sinais corporais gerais como batimentos cardíacos, enquanto este sistema foca especificamente nos sinais visuais de sonolência facial. O ideal seria combinar ambas as abordagens.
+
+**P: Qual a diferença para aplicativos de celular que fazem isso?**
+R: Este sistema é muito mais avançado que aplicativos simples. Usa tecnologia de ponta (MediaPipe), múltiplas métricas simultâneas, calibração personalizada e algoritmos científicos. Aplicativos básicos geralmente usam apenas uma métrica simples.
+
+### 🚀 Perguntas sobre o Futuro
+
+**P: Que melhorias estão planejadas?**
+R: Possíveis evoluções incluem: integração com mais sensores (frequência cardíaca, temperatura), análise de padrões de longo prazo, integração com sistemas veiculares, e versões móveis para smartphones.
+
+**P: Este sistema poderia salvar vidas?**
+R: Potencialmente sim. A sonolência ao volante causa milhares de acidentes anualmente. Sistemas de detecção precoce de fadiga, como este, podem alertar motoristas antes que acidentes aconteçam, salvando vidas e prevenindo ferimentos.
+
+**P: A tecnologia está disponível comercialmente?**
+R: Este é um projeto de pesquisa e demonstração. As tecnologias base (MediaPipe, algoritmos de processamento) são open-source e poderiam ser desenvolvidas comercialmente por empresas especializadas em segurança veicular ou sistemas de monitoramento.
